@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');* 
+:root {
+    --color-primaria: #000000;
+    --color-secundaria: #F6F6F6;
+    --color-terciaria: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+ 
+*    {  /* * significa que vas aplicar a todos os elementos do HTML */
+            margin: 0; /* margen o espacios entre os elementos */
+            padding: 0; /* padding es el espacio dentro de los elementos */
+            box-sizing: border-box; /* box-sizing: border-box; es para que el padding y el border no afecten el tamaño del elemento */
+       }
+
+body {
+        background-color: #000000 ;
+        color: #f6f6f6;
+        height: 100vh; /* 100vh es el 100% de la altura de la pantalla */
+        box-sizing: border-box; /* box-sizing: border-box; es para que el padding y el border no afecten el tamaño del elemento */
+     }
+.header { padding: 2% 0% 0% 15%; }
+
+
+     strong   {
+           color: #22d4df;
+
+         }
+
+.header__menu{ display: flex; gap: 80px; }   
+.header__menu__link { 
+    font-family: "Montserrat", sans-serif; /* fuente de google fonts */
+    font-size: 1.5rem; /* font-size: 24px; es para que el tamaño de la fuente sea de 24px */
+    font-weight: 600; /* font-weight: 700; es para que el texto sea más grueso */
+    text-decoration: none; /* text-decoration: none; es para que no haya subrayado en el texto */
+    color: #f6f6f6; /* color: #f6f6f6; es para que el color del texto sea */
+}      
+.titulo-destaque  {
+                  color: #ccdf22;
+                  }
+.presentacion       {
+                    display: flex; /* display: flex; es para que los elementos se acomoden en una sola fila */
+                    align-items: center; /* align-items: center; es para que los elementos se acomoden en el centro */
+                    margin: 10% 15%; /* margen o espacios entre los elementos */
+                    justify-content: space-between; /* justify-content: space-between; es para que los elementos se acomoden en los extremos */
+                    gap: 82px; /* gap: 82px; es para que haya un espacio de 82px entre los elementos */ 
+                    }
+.presentacion_contenido {
+                        width: 50%; /* width: 615px; es para que el ancho del elemento sea de 615px */
+                        display: flex; /* display: flex; es para que los elementos se acomoden en una sola fila */  
+                        flex-direction: column; /* flex-direction: column; es para que los elementos se acomoden en una sola columna */
+                        gap: 40px; /* gap: 40px; es para que haya un espacio de 40px entre los elementos */
+                        }
+.presentacion_contenido__titulo{
+                                font-size: 1.5rem; /* font-size: small; es para que el tamaño de la fuente sea pequeño */
+                                font-family: "Krona one", sans-serif; 
+                              }
+.presentacion_contenido_texto{
+                                font-family:"Montserrat", sans-serif;   /* fuente de google fonts */
+                                font-size: 1.5rem;
+                             }
+
+.presentacion_enlaces       {
+                             display: flex; /* display: flex; es para que los elementos se acomoden en una sola fila */
+                             flex-direction: column; /* flex-direction: column; es para que los elementos se acomoden en una sola columna */
+                             justify-content: space-between; /* justify-content: space-between; es para que los elementos se acomoden en los extremos */
+                             align-items: center; /* align-items: center; es para que los elementos se acomoden en el centro */
+                             gap: 32px; /* gap: 32px; es para que haya un espacio de 32px entre los elementos */
+                            }
+.presentacion_enlaces_link {
+                            display: flex; /* display: flex; es para que los elementos se acomoden en una sola fila */
+                            justify-content: center; /* justify-content: space-between; es para que los elementos se acomoden en los extremos */
+                            gap: 16px; /* gap: 16px; es para que haya un espacio de 16px entre los elementos */
+                            border: 2px solid var(--color-terciario); /* border: 2px solid var(--color-terciario); es para que haya un borde de 2px sólido */
+                            width: 50%; /* width: 280px; es para que el ancho del elemento sea de 280px */
+                            background-color: #22d4df;
+                            text-align: 50%; /* text-align: center; es para que el texto se acomode en el centro */
+                            padding: 21.5px 0; /* padding es el espacio dentro de los elementos,podemos poner dos valores. primer valor vertical y el segundo valor es el del horizontal */
+                            border-radius: 8px; /* border-radius: 16px; es para que el borde del elemento sea redondeado */
+                            font-family: "Montserrat", sans-serif; /* fuente de google fonts */
+                            font-size: 1.5rem; /* font-size: 24px; es para que el tamaño de la fuente sea de 24px */
+                            font-weight: 600; /* font-weight: 700; es para que el texto sea más grueso */
+                            text-decoration: none; /* text-decoration: none; es para que no haya subrayado en el texto */ 
+                            color: #000000; /* color: #000000; es para que el color del texto sea */
+                           }
+.presentacion__imagen {
+                     width: 50% /* width: 50% para ajuste mejor a la pantalla de donde se visualize*/
+                     }
+
+.footer{
+        color:var(--color-primaria);
+        background-color: var(--color-terciaria);
+        padding: 24px;
+        text-align: center;
+        font-family: var(--fuente-krona);
+        font-size: 1.5rem;
+        font-weight: 400;
+       }
+    @media (max-width : 800px) /* @media (max-width: 800px) es para que los estilos se apliquen cuando el ancho de la pantalla sea menor a 800px */
+           {
+            .header { padding: 20%; }
+            .header__menu { justify-self: center;}
+            .presentation {
+                            flex-direction: column-reverse;
+                            padding: 5%;
+                          } 
+            .presentation__content { width: auto; }
+           }
